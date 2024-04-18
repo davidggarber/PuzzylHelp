@@ -2,6 +2,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Quick links</title>
+    <script>
+      var redirs = {
+        'pbn': 'https://en.wikipedia.org/wiki/Nonogram',
+        'set': 'https://en.wikipedia.org/wiki/Set_(card_game)'
+      }
+      var path = window.location.href.toLowerCase();
+      for (var r of Object.keys(redirs)) {
+        var i = path.indexOf(r);
+        if (i >= 0) {
+          window.location.href = redirs[r];
+          break;
+        }
+      }
+    </script>
   </head>
   <body>
     <h1>Links to instructions for common puzzle types and game references.</h1>
